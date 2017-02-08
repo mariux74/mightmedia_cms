@@ -35,7 +35,7 @@ include_once ( ROOT . "priedai/kategorijos.php" );
 kategorija( "vartotojai", TRUE );
 //trinimas
 if ( isset( $_POST['users_delete'] ) ) {
-	foreach ( $_POST['userss_delete'] as $a=> $b ) {
+	foreach ( $_POST['users_delete'] as $a=> $b ) {
 		$trinti[] = escape( $b );
 	}
 	mysql_query1( "DELETE FROM `" . LENTELES_PRIESAGA . "users` WHERE `id` IN(" . implode( ', ', $trinti ) . ") AND `levelis` > 1" );
